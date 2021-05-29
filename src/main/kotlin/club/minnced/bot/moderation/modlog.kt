@@ -29,9 +29,9 @@ import net.dv8tion.jda.api.entities.Message
 import net.dv8tion.jda.api.entities.TextChannel
 import net.dv8tion.jda.api.entities.User
 import reactor.core.publisher.Mono
+import reactor.kotlin.core.util.function.component1
+import reactor.kotlin.core.util.function.component2
 import reactor.util.function.Tuple2
-import reactor.util.function.component1
-import reactor.util.function.component2
 import java.awt.Color
 import java.time.Duration
 import java.time.Instant

@@ -28,10 +28,10 @@ import net.dv8tion.jda.api.Permission
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import net.dv8tion.jda.api.exceptions.PermissionException
 import reactor.core.publisher.Mono
-import reactor.core.publisher.switchIfEmpty
-import reactor.core.publisher.toFlux
 import java.time.OffsetDateTime
 import java.time.temporal.ChronoUnit
+import reactor.kotlin.core.publisher.*
+
 
 // Ban and immediately unban a user
 fun onSoftban(arg: String?, event: MessageReceivedEvent): Mono<*> {

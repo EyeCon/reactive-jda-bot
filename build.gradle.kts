@@ -23,6 +23,7 @@ val JDA_VERSION = "4.2.1"
 dependencies {
     implementation("club.minnced:jda-reactor:1.0.0")
     implementation("ch.qos.logback:logback-classic:1.2.3")
+    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions:1.1.3")
     implementation("com.github.DV8FromTheWorld:JDA:v4.2.1") {
         exclude(module = "opus-java")
     }

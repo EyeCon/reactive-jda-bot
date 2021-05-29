@@ -40,6 +40,7 @@ import net.dv8tion.jda.api.requests.GatewayIntent.*
 import reactor.core.publisher.Mono
 import reactor.core.scheduler.Schedulers
 import java.io.File
+import java.util.*
 import java.util.concurrent.Executors
 import java.util.concurrent.ForkJoinPool
 import kotlin.concurrent.thread
@@ -167,7 +168,7 @@ private fun getToken(args: Array<String>): String {
 fun onBasicCommand(event: MessageReceivedEvent): Mono<*> {
     val content = event.message.contentRaw
     val parts = content.split(" ", limit = 2)
-    val command = parts[0].substring(2).toLowerCase()
+    val command = parts[0].substring(2).lowercase(Locale.getDefault())
     return when (command) {
         "ping" -> onPing(event.channel)
         "rtt" -> onRTT(event.channel)
@@ -179,7 +180,7 @@ fun onBasicCommand(event: MessageReceivedEvent): Mono<*> {
 fun onGuildCommand(event: MessageReceivedEvent): Mono<*> {
     val content = event.message.contentRaw
     val parts = content.split(" ", limit = 2)
-    val command = parts[0].substring(2).toLowerCase()
+    val command = parts[0].substring(2).lowercase(Locale.getDefault())
     return when (command) {
         "softban" -> onSoftban(parts.getOrNull(1), event)
         "purge" -> onPurge(parts.getOrNull(1), event)

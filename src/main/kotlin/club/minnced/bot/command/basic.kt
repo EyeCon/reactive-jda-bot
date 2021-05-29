@@ -26,9 +26,9 @@ import net.dv8tion.jda.api.EmbedBuilder
 import net.dv8tion.jda.api.entities.MessageChannel
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import reactor.core.publisher.Mono
-import reactor.core.publisher.switchIfEmpty
 import java.awt.Color
 import java.util.concurrent.ThreadLocalRandom
+import reactor.kotlin.core.publisher.*
 
 // Display ping
 fun onPing(channel: MessageChannel): Mono<*> {
